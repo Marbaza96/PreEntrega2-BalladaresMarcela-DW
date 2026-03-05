@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serendipia | Home</title>
+
+    <!-- LINK CSS -->
+    <link rel="stylesheet" href="./css/styles.css">
+
+    <!-- BOOSTRAP CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <!-- HEADER -->
+    <header class="header">
+
+        <!-- LOGO + MENU DE NAVEGACIÓN -->
+        <div class="header__bar">
+            <a class="header__brand" href="index.html">
+                <img class="header__logo" src="./img/logoserendipiacolor.png" alt="Logo de Serendipia a color">
+            </a>
+
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a class="nav__link nav__link--active" href="index.html">Home</a>
+                    </li>
+                    <li class="nav__item">
+                        <a class="nav__link" href="./pages/catalogo.html">Catálogo</a>
+                    </li>
+                    <li class="nav__item">
+                        <a class="nav__link" href="./pages/contacto.html">Contacto</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+        <!-- BANNER -->
+        <section class="banner">
+            <img src="./img/bannerserendipia.png" alt="Imagen de encabezado de Serendipia">
+        </section>
+
+    </header>
+
+    <!-- MAIN -->
+    <main class="main">
+
+        <!-- SECCIONES HOME -->
+        <section class="homeGrid">
+
+            <!-- SECCION 1 - CATALOGO -->
+            <section class="card card--catalogo" aria-label="Catálogo">
+                <h2 class="card__title">Catálogo</h2>
+
+                <!-- CAROUSEL BOOTSTRAP -->
+                <div id="catalogoCarousel" class="carousel slide" data-bs-ride="carousel">
+
+                    <!-- INDICADORES SLIDES -->
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#catalogoCarousel" data-bs-slide-to="0" class="active"
+                            aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#catalogoCarousel" data-bs-slide-to="1"
+                            aria-label="Slide 2"></button>
+                    </div>
+
+                    <!-- SLIDES -->
+                    <div class="carousel-inner">
+
+                        <!-- SLIDE 1 -->
+                        <div class="carousel-item active">
+                            <div class="row g-3">
+                                <div class="col-12 col-md-4">
+                                    <div class="catalogoCard">
+                                        <img src="./img/productocarteles.png" class="catalogoCard__img"
+                                            alt="Carteles reglas del salón">
+                                    </div>
+                                </div>
+
+                                <div class="col-12 col-md-4">
+                                    <div class="catalogoCard">
+                                        <img src="./img/productocuadernos.png" class="catalogoCard__img"
+                                            alt="Cuadernos de la amistad">
+                                    </div>
+                                </div>
+
+                                <div class="col-12 col-md-4">
+                                    <div class="catalogoCard">
+                                        <img src="./img/productopapeleria.png" class="catalogoCard__img"
+                                            alt="Papelería personalizada">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- SLIDE 2 -->
+                        <div class="carousel-item">
+                            <div class="row g-3">
+                                <div class="col-12 col-md-4">
+                                    <div class="catalogoCard">
+                                        <img src="./img/productoalcancia.png" class="catalogoCard__img"
+                                            alt="Alcancías personalizadas">
+                                    </div>
+                                </div>
+
+                                <div class="col-12 col-md-4">
+                                    <div class="catalogoCard">
+                                        <img src="./img/productodomino.png" class="catalogoCard__img"
+                                            alt="Dominó de fracciones">
+                                    </div>
+                                </div>
+
+                                <div class="col-12 col-md-4">
+                                    <div class="catalogoCard">
+                                        <img src="./img/productoplanner.png" class="catalogoCard__img"
+                                            alt="Planner semanal personalizado">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- FLECHAS -->
+                    <button class="carousel-control-prev" type="button" data-bs-target="#catalogoCarousel"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Anterior</span>
+                    </button>
+
+                    <button class="carousel-control-next" type="button" data-bs-target="#catalogoCarousel"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Siguiente</span>
+                    </button>
+
+                </div>
+            </section>
+
+            <!-- SECCION 2 - PRESUPUESTO -->
+            <section class="card card--presupuesto" aria-label="Presupuesto sin costo">
+                <!-- TITULO DE SECTION Y PRIMER TEXTO -->
+                <h2 class="card__title card__title--center">Presupuesto sin costo</h2>
+                <p class="presupuesto__text">
+                    Envíanos tu consulta y<br> cotiza gratis tu propuesta.
+                </p>
+                <!-- CHECKLIST DE BENEFICIOS -->
+                <ul class="presupuesto__beneficios">
+                    <li>Respuesta en 24/48 hs</li>
+                    <li>Envíos a todo Uruguay</li>
+                    <li>Diseños personalizados</li>
+                </ul>
+
+                <a class="btnCard" href="#">AQUÍ</a>
+            </section>
+
+            <!-- SECCION 3 - SOBRE NOSOTROS -->
+            <section class="card card--sobre" aria-label="Sobre Nosotros">
+                <h2 class="card__title">Sobre nosotros</h2>
+
+                <p class="sobre__text">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. A neque nihil reiciendis sequi. Tempora voluptatem quam quia. Laborum enim, facilis dolore eligendi velit blanditiis, corrupti voluptatum obcaecati eaque placeat ea?Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, itaque sequi illum dolore consectetur ad, quos voluptates laudantium quisquam dolorem excepturi est quia vero? Facilis aliquam obcaecati odio sit quibusdam!
+                </p>
+
+                <div class="team">
+
+                    <!-- CARD PERSONA N° 1 -->
+                    <article class="team__member">
+                        <div class="team__top">
+                            <div class="team__photo">
+                                <img class="team__img" src="./img/foto-joha-color.png" alt="Foto Johana Martínez">
+                            </div>
+                            <div class="team__info">
+                                <div class="team__name">Johana Martínez</div>
+
+                                <div class="team__bio">
+                                    Maestra de primaria &<br>Asesora de contenido
+                                </div>
+                            </div>
+                        </div>
+
+                    </article>
+
+
+                    <!-- CARD PERSONA N° 2 -->
+                    <article class="team__member">
+                        <div class="team__top">
+                            <div class="team__photo">
+                                <img class="team__img" src="./img/foto-tati-color.png" alt="Foto Tatiana Denis">
+                            </div>
+                            <div class="team__info">
+                                <div class="team__name">Tatiana Denis</div>
+                                <div class="team__bio">
+                                    Maestra de primaria &<br>Creadora de contenido.
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                    </article>
+
+                    <!-- CARD PERSONA N° 3 -->
+                    <article class="team__member">
+                        <div class="team__top">
+                            <div class="team__photo">
+                                <img class="team__img" src="./img/foto-marce-color.png" alt="Foto Marcela Balladares">
+                            </div>
+                            <div class="team__info">
+                                <div class="team__name">Marcela Balladares</div>
+                                <div class="team__bio">
+                                    Community Manager &<br>Diseñadora.
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                    </article>
+
+                </div>
+            </section>
+
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+
+    <footer class="footer">
+        <div class="footer__box">
+
+            <!-- INFO -->
+            <div class="footer__info">
+                <p class="footer__line">Celular de contacto <strong>(+598) 123 456</strong></p>
+                <p class="footer__line"><strong>Uruguay | Dirección Calle Sarasa N° 123</strong></p>
+                <p class="footer__line">Horario de atención: <strong>Lunes a Viernes | 09:00 h a 18:00 h</strong></p>
+            </div>
+
+            <!-- LOGOS REDES (CENTRO) -->
+            <div class="footer__social" aria-label="Redes sociales">
+                <!-- INSTAGRAM -->
+                <a class="footer__icon" href="https://www.instagram.com/serendipia_art.uy/?hl=es-la" target="_blank" aria-label="Instagram">
+                    <img src="./img/logoredes-ig.png" alt="Instagram">
+                </a>
+                <!-- FACEBOOK -->
+                <a class="footer__icon" href="https://www.facebook.com/profile.php?id=61572927813708&locale=es_LA" target="_blank" aria-label="Facebook">
+                    <img src="./img/logoredes-fb.png" alt="Facebook">
+                </a>
+                <!--EMAIL -->
+                <a class="footer__icon" href="https://accounts.google.com/v3/signin/identifier?continue=https%3A%2F%2Fmail.google.com%2Fmail%2Fu%2F0%2F&dsh=S-534827807%3A1772737593912787&emr=1&followup=https%3A%2F%2Fmail.google.com%2Fmail%2Fu%2F0%2F&ifkv=ASfE1-oh9R4bppo8j1NmPG-FbDMNKpvaKEikH_8S3-Yq4ZZQvi3bvS82tOVkE8B-ut_WA383IE6o&osid=1&passive=1209600&service=mail&flowName=GlifWebSignIn&flowEntry=ServiceLogin" target="_blank" aria-label="Email">
+                    <img src="./img/logoredes-mail.png" alt="Email">
+                </a>
+            </div>
+
+            <!-- LOGO AL HOME -->
+            <a class="footer__home" href="index.html" aria-label="Volver al inicio">
+                <img src="./img/logoserendipiacolor.png" alt="Logo de Serendipia">
+            </a>
+
+        </div>
+    </footer>
+
+    <!-- BOOSTRAP SCRIPT JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

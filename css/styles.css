@@ -1,0 +1,415 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ------------------------------------------- */
+/* HEADER */
+
+.header {
+  position: relative;
+}
+
+.header__bar {
+  position: absolute;
+  top: 22px;
+  left: 110px;
+  z-index: 10;
+  background: transparent;
+  height: auto;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+/* LOGO */
+.header__logo {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  display: block;
+  transition: transform .2s ease;
+}
+
+.header__logo:hover {
+  transform: translateY(-2px)
+}
+
+/* NAV */
+.nav__list {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 100px;
+}
+
+.nav__link {
+  color: #bb9df4;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: 750;
+  letter-spacing: 0.1em;
+  padding: 6px 2px;
+}
+
+.nav__link:hover {
+  color: #d0e9f3;
+}
+
+.nav__link:focus-visible {
+  outline: 2px solid #ffffff;
+  outline-offset: 4px;
+}
+
+.nav__link--active {
+  color: #f4c1c1;
+}
+
+/* BANNER */
+.banner img {
+  width: 100%;
+  object-fit: contain;
+}
+
+/* ------------------------------------------- */
+/* MAIN */
+
+.main {
+  background: #fde3e6;
+  padding: 24px;
+}
+
+/* GRID PRINCIPAL (HOME) */
+.homeGrid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-areas:
+    "catalogo presupuesto"
+    "sobre    sobre";
+  gap: 24px;
+  align-items: stretch;
+}
+
+/* CARDS */
+.homeGrid .card {
+  display: flex;
+  flex-direction: column;
+  background: rgba(255, 255, 255, 0.35);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 6px;
+  padding: 20px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.homeGrid .card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+}
+
+/* AREAS DEL GRID */
+.card--catalogo {
+  grid-area: catalogo;
+}
+
+.card--presupuesto {
+  grid-area: presupuesto;
+}
+
+.card--sobre {
+  grid-area: sobre;
+}
+
+/* TITULOS */
+.card__title {
+  margin: 0;
+  padding-left: 10px;
+  padding-bottom: 10px;
+  min-height: 28px;
+  font-size: 22px;
+  letter-spacing: 0.5px;
+  color: #bd9ff5;
+  text-transform: uppercase;
+}
+
+.card__title--center {
+  text-align: center;
+  padding-left: 0;
+}
+
+/* ------------------------------------------- */
+/* SECCION CATALOGO */
+
+.card--catalogo .carousel {
+  padding: 6px 8px 18px;
+}
+
+/* CARD BLANCA DE CADA PRODUCTO */
+.catalogoCard {
+  background: #ffffff;
+  border: 1px solid rgba(155, 109, 109, 0.08);
+  border-radius: 6px;
+  aspect-ratio: 1/1;
+  padding: 10px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.catalogoCard__img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+/* FLECHAS */
+.card--catalogo .carousel-control-prev-icon,
+.card--catalogo .carousel-control-next-icon {
+  filter: invert(1) grayscale(1);
+  opacity: 0.85;
+}
+
+/* ------------------------------------------- */
+/* SECCION PRESUPUESTO */
+
+/* CONTENEDOR "CARD" PRESUPUESTO */
+.card--presupuesto {
+  position: relative;
+  padding-top: 28px;
+  padding-bottom: 28px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 18px;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.card--presupuesto::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("../img/planes-presupuesto.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 120%;
+  opacity: 0.2;
+  z-index: 0;
+  margin-right: 80px;
+}
+
+/* TITULO PRESUPUESTO */
+.card--presupuesto .card__title {
+  max-width: 300px;
+  margin-top: 10px;
+}
+
+/* TEXTO PRINCIPAL (p) */
+.presupuesto__text {
+  text-align: center;
+  margin: 0;
+  font-size: 18px;
+  color: #2b2b2b;
+  max-width: 300px;
+}
+
+/* BOTÓN "AQUI" */
+.btnCard {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 300px;
+  max-width: 100%;
+  height: 44px;
+  margin-bottom: 15px;
+  background: #a4d2dd;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 750;
+  font-size: 20px;
+  letter-spacing: 0.5px;
+}
+
+/* CHECKLIST DE BENEFICIOS */
+.presupuesto__beneficios {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  max-width: 300px;
+}
+
+.presupuesto__beneficios li {
+  margin: 10px 0;
+  font-size: 16px;
+  color: #2b2b2b;
+}
+
+.presupuesto__beneficios li::before {
+  content: "✓ ";
+  color: #a4d2dd;
+  font-weight: 800;
+}
+/* ------------------------------------------- */
+/* SECCION SOBRE NOSOTROS */
+
+.sobre__text {
+  margin: 0 0 18px 10px;
+  color: #2b2b2b;
+  line-height: 1.4;
+}
+
+.team {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 26px;
+  margin-top: 12px;
+}
+
+.team__member {
+  display: grid;
+  gap: 10px;
+  padding: 12px;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06) ;
+}
+
+/* FILA SUPERIOR */
+.team__top {
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  gap: 16px;
+  align-items: center;
+}
+
+/* CONTENEDOR IMG */
+.team__photo {
+  width: 250px;
+  aspect-ratio: 1 / 1;
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* IMAGEN */
+.team__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  filter: grayscale(20%);
+}
+
+/* CONTENEDOR TEXTOS */
+.team__info {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+/* NOMBRE */
+.team__name {
+  font-size: 18px;
+  font-weight: 600;
+  text-align:center;
+}
+
+/* BIO */
+.team__bio {
+  font-size: 15px;
+  font-weight: 400;
+  text-align: center;
+}
+/* ------------------------------------------- */
+/* FOOTER */
+
+.footer{
+  background: #c5e4f7;
+  padding: 18px 10px 20px;
+}
+
+.footer__box {
+  margin-left: 20px;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 20px;
+}
+
+/* INFO */
+.footer__info{
+  justify-self: start;
+  display: grid;
+  gap: 2px;
+  text-align: left;
+}
+
+.footer__line{
+  margin: 0;
+  font-size: 13px;
+}
+
+/* REDES */
+.footer__social{
+  justify-self: center;
+  display: flex;
+  align-items: center;
+  gap: 100px;
+}
+
+/* ICONOS DE REDES */
+.footer__icon{
+  width: 46px;
+  height: 46px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  background: transparent;
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.footer__icon img{
+  width: 90px;
+  height: 90px;
+  object-fit: contain;
+  display: block;
+  opacity: 0.9;
+}
+
+.footer__icon:hover{
+  transform: translateY(-2px);
+}
+
+/* LOGO SERENDIPIA HOME EN FOOTER */
+.footer__home{
+  justify-self: end;
+  margin-right: 15px;
+  display: inline-flex;
+  transition: transform .2s ease;
+}
+
+.footer__home img{
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
+  display: block;
+}
+
+.footer__home:hover{
+  transform: translateY(-2px);
+}
+
+/* ------------------------------------------- */
