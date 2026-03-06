@@ -12,35 +12,53 @@
     <!-- BOOSTRAP CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
+    <!-- LINK FUENTE PERSONALIZADA -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=LINE+Seed+JP:wght@100;400;700;800&display=swap"
+        rel="stylesheet">
+
 </head>
 
 <body>
     <!-- HEADER -->
     <header class="header">
 
-        <!-- LOGO + MENU DE NAVEGACIÓN -->
+        <!-- LOGO + MENU DE NAVEGACIÓN (BOOTSTRAP) -->
         <div class="header__bar">
             <a class="header__brand" href="index.html">
                 <img class="header__logo" src="./img/logoserendipiacolor.png" alt="Logo de Serendipia a color">
             </a>
 
-            <nav class="nav">
-                <ul class="nav__list">
-                    <li class="nav__item">
-                        <a class="nav__link nav__link--active" href="index.html">Home</a>
-                    </li>
-                    <li class="nav__item">
-                        <a class="nav__link" href="./pages/catalogo.html">Catálogo</a>
-                    </li>
-                    <li class="nav__item">
-                        <a class="nav__link" href="./pages/contacto.html">Contacto</a>
-                    </li>
-                </ul>
+            <nav class="navbar navbar-expand-lg header__navbar">
+                <div class="container-fluid header__navWrap">
+                    <button class="navbar-toggler header__toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false"
+                        aria-label="Abrir menú de navegación">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse header__collapse" id="mainNav">
+                        <ul class="navbar-nav ms-auto header__menu">
+                            <li class="nav-item">
+                                <a id="activeLink" class="nav-link active header__link" aria-current="Home"
+                                    href="index.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link header__link" href="./pages/catalogo.html">Catálogo</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link header__link" href="./pages/contacto.html">Contacto</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </nav>
         </div>
 
         <!-- BANNER -->
         <section class="banner">
+            <h1 class="visually-hidden">Serendipia - Papelería creativa y recursos didácticos</h1>
             <img src="./img/bannerserendipia.png" alt="Imagen de encabezado de Serendipia">
         </section>
 
@@ -53,7 +71,7 @@
         <section class="homeGrid">
 
             <!-- SECCION 1 - CATALOGO -->
-            <section class="card card--catalogo" aria-label="Catálogo">
+            <div class="card card--catalogo" aria-label="Catálogo">
                 <h2 class="card__title">Catálogo</h2>
 
                 <!-- CAROUSEL BOOTSTRAP -->
@@ -138,10 +156,13 @@
                     </button>
 
                 </div>
-            </section>
+
+                <!-- BTN "VER CATALOGO" -->
+                <a id="btnCatalogo" class="btnCard btnCard--catalogo" href="pages/catalogo.html">VER CATÁLOGO</a>
+            </div>
 
             <!-- SECCION 2 - PRESUPUESTO -->
-            <section class="card card--presupuesto" aria-label="Presupuesto sin costo">
+            <div class="card card--presupuesto" aria-label="Presupuesto sin costo">
                 <!-- TITULO DE SECTION Y PRIMER TEXTO -->
                 <h2 class="card__title card__title--center">Presupuesto sin costo</h2>
                 <p class="presupuesto__text">
@@ -149,20 +170,23 @@
                 </p>
                 <!-- CHECKLIST DE BENEFICIOS -->
                 <ul class="presupuesto__beneficios">
-                    <li>Respuesta en 24/48 hs</li>
+                    <li>Respuesta en 24/48 h</li>
                     <li>Envíos a todo Uruguay</li>
                     <li>Diseños personalizados</li>
                 </ul>
 
-                <a class="btnCard" href="#">AQUÍ</a>
-            </section>
+                <a class="btnCard" href="./pages/contacto.html">AQUÍ</a>
+            </div>
 
             <!-- SECCION 3 - SOBRE NOSOTROS -->
-            <section class="card card--sobre" aria-label="Sobre Nosotros">
+            <div class="card card--sobre" aria-label="Sobre Nosotros">
                 <h2 class="card__title">Sobre nosotros</h2>
 
                 <p class="sobre__text">
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. A neque nihil reiciendis sequi. Tempora voluptatem quam quia. Laborum enim, facilis dolore eligendi velit blanditiis, corrupti voluptatum obcaecati eaque placeat ea?Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, itaque sequi illum dolore consectetur ad, quos voluptates laudantium quisquam dolorem excepturi est quia vero? Facilis aliquam obcaecati odio sit quibusdam!
+                    Serendipia es un emprendimiento de papelería creativa y recursos didácticos. Nuestra finalidad es
+                    unir el diseño creativo con la funcionalidad didáctica resultando en una combinación homogénea, apta
+                    para todas las edades.<br> Los productos están pensados para poder adaptarse tanto al aula como al
+                    ámbito personal. Personalizamos todos nuestros productos a gusto y conveniencia del consumidor.
                 </p>
 
                 <div class="team">
@@ -171,17 +195,15 @@
                     <article class="team__member">
                         <div class="team__top">
                             <div class="team__photo">
-                                <img class="team__img" src="./img/foto-joha-color.png" alt="Foto Johana Martínez">
+                                <img class="team__img" src="./img/foto-joha-color.png"
+                                    alt="Foto retrato de Johana Martínez">
                             </div>
                             <div class="team__info">
-                                <div class="team__name">Johana Martínez</div>
+                                <h3 class="team__name">Johana Martínez</h3>
 
-                                <div class="team__bio">
-                                    Maestra de primaria &<br>Asesora de contenido
-                                </div>
+                                <p class="team__bio">Maestra de primaria &<br>Asesora de contenido</p>
                             </div>
                         </div>
-
                     </article>
 
 
@@ -189,40 +211,36 @@
                     <article class="team__member">
                         <div class="team__top">
                             <div class="team__photo">
-                                <img class="team__img" src="./img/foto-tati-color.png" alt="Foto Tatiana Denis">
+                                <img class="team__img" src="./img/foto-tati-color.png"
+                                    alt="Foto retrato de Tatiana Denis">
                             </div>
                             <div class="team__info">
-                                <div class="team__name">Tatiana Denis</div>
-                                <div class="team__bio">
+                                <h3 class="team__name">Tatiana Denis</h3>
+                                <p class="team__bio">
                                     Maestra de primaria &<br>Creadora de contenido.
-                                </div>
+                                </p>
                             </div>
 
                         </div>
-
-
                     </article>
 
                     <!-- CARD PERSONA N° 3 -->
                     <article class="team__member">
                         <div class="team__top">
                             <div class="team__photo">
-                                <img class="team__img" src="./img/foto-marce-color.png" alt="Foto Marcela Balladares">
+                                <img class="team__img" src="./img/foto-marce-color.png"
+                                    alt="Foto retrato de Marcela Balladares">
                             </div>
                             <div class="team__info">
-                                <div class="team__name">Marcela Balladares</div>
-                                <div class="team__bio">
+                                <h3 class="team__name">Marcela Balladares</h3>
+                                <p class="team__bio">
                                     Community Manager &<br>Diseñadora.
-                                </div>
+                                </p>
                             </div>
-
                         </div>
-
-
                     </article>
-
                 </div>
-            </section>
+            </div>
 
         </section>
     </main>
@@ -240,20 +258,23 @@
             </div>
 
             <!-- LOGOS REDES (CENTRO) -->
-            <div class="footer__social" aria-label="Redes sociales">
+            <nav class="footer__social" aria-label="Redes sociales">
                 <!-- INSTAGRAM -->
-                <a class="footer__icon" href="https://www.instagram.com/serendipia_art.uy/?hl=es-la" target="_blank" aria-label="Instagram">
-                    <img src="./img/logoredes-ig.png" alt="Instagram">
+                <a class="footer__icon" href="https://www.instagram.com/serendipia_art.uy/?hl=es-la" target="_blank"
+                    aria-label="Instagram">
+                    <img src="./img/logoredes-ig.png" alt="Icono de Instagram">
                 </a>
                 <!-- FACEBOOK -->
-                <a class="footer__icon" href="https://www.facebook.com/profile.php?id=61572927813708&locale=es_LA" target="_blank" aria-label="Facebook">
-                    <img src="./img/logoredes-fb.png" alt="Facebook">
+                <a class="footer__icon" href="https://www.facebook.com/profile.php?id=61572927813708&locale=es_LA"
+                    target="_blank" aria-label="Facebook">
+                    <img src="./img/logoredes-fb.png" alt=" Icono de Facebook">
                 </a>
                 <!--EMAIL -->
-                <a class="footer__icon" href="https://accounts.google.com/v3/signin/identifier?continue=https%3A%2F%2Fmail.google.com%2Fmail%2Fu%2F0%2F&dsh=S-534827807%3A1772737593912787&emr=1&followup=https%3A%2F%2Fmail.google.com%2Fmail%2Fu%2F0%2F&ifkv=ASfE1-oh9R4bppo8j1NmPG-FbDMNKpvaKEikH_8S3-Yq4ZZQvi3bvS82tOVkE8B-ut_WA383IE6o&osid=1&passive=1209600&service=mail&flowName=GlifWebSignIn&flowEntry=ServiceLogin" target="_blank" aria-label="Email">
-                    <img src="./img/logoredes-mail.png" alt="Email">
+                <a class="footer__icon" href="mailto:marcelaballadares96@gmail.com"
+                    aria-label="Enviar email a Serendipia">
+                    <img src="./img/logoredes-mail.png" alt="Icono de Email">
                 </a>
-            </div>
+            </nav>
 
             <!-- LOGO AL HOME -->
             <a class="footer__home" href="index.html" aria-label="Volver al inicio">

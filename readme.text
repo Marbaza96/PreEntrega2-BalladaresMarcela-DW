@@ -1,0 +1,10 @@
+
+-- NOTAS, ACLARACIONES Y REFERENCIAS --
+
+1. Los links href="#" en pag. Catálogo fueron puestos a propósito para eventualmente crear
+más páginas correspondientes a cada producto. No fueron incluidos aún para no sobrepaar la cantidad de html requeridos.
+
+2. Hay ID creados en varias ocasiones que no corresponden a las clases BEM que venía usando. (Ej: #activeLink, #btnCatalogo, etc) 
+Los usé como recurso para generar un diferencial con las clases de Boostrap (y en alguna ocasión también
+como solución al "before") ya que estas sobreescribían las clases creadas por mi.
+

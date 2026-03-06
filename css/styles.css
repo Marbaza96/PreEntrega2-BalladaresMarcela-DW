@@ -7,6 +7,7 @@
 
 /* ------------------------------------------- */
 /* HEADER */
+/* ------------------------------------------- */
 
 .header {
   position: relative;
@@ -18,11 +19,9 @@
   left: 110px;
   z-index: 10;
   background: transparent;
-  height: auto;
-  padding: 0;
   display: flex;
   align-items: center;
-  gap: 40px;
+  gap: 50px;
 }
 
 /* LOGO */
@@ -35,48 +34,46 @@
 }
 
 .header__logo:hover {
-  transform: translateY(-2px)
+  transform: translateY(-2px);
 }
 
-/* NAV */
-.nav__list {
-  list-style: none;
+/* LINKS DEL NAVBAR (MODIFICA BOOTSTRAP) */
+
+.header__menu {
   display: flex;
   align-items: center;
-  gap: 100px;
+  gap: 60px;
 }
 
-.nav__link {
+.header__menu .nav-link {
   color: #bb9df4;
-  text-decoration: none;
   text-transform: uppercase;
+  font-family: "LINE Seed JP", sans-serif;
   font-size: 18px;
-  font-weight: 750;
-  letter-spacing: 0.1em;
+  font-weight: 700;
+  letter-spacing: 0.2em;
   padding: 6px 2px;
 }
 
-.nav__link:hover {
+.header__menu .nav-link:hover {
   color: #d0e9f3;
 }
 
-.nav__link:focus-visible {
-  outline: 2px solid #ffffff;
-  outline-offset: 4px;
-}
-
-.nav__link--active {
-  color: #f4c1c1;
+/* LINK ACTIVO */
+#activeLink {
+  color: #9cd6ec;
 }
 
 /* BANNER */
 .banner img {
+  display: block;
   width: 100%;
-  object-fit: contain;
+  height: auto;
 }
 
 /* ------------------------------------------- */
 /* MAIN */
+/* ------------------------------------------- */
 
 .main {
   background: #fde3e6;
@@ -115,6 +112,7 @@
 /* AREAS DEL GRID */
 .card--catalogo {
   grid-area: catalogo;
+  position: relative;
 }
 
 .card--presupuesto {
@@ -131,7 +129,9 @@
   padding-left: 10px;
   padding-bottom: 10px;
   min-height: 28px;
-  font-size: 22px;
+  font-family: "LINE Seed JP", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
   letter-spacing: 0.5px;
   color: #bd9ff5;
   text-transform: uppercase;
@@ -142,8 +142,21 @@
   padding-left: 0;
 }
 
+/* BTN "VER CATÁLOGO */
+#btnCatalogo {
+  position: absolute;
+  top: 16px;
+  right: 30px;
+  width: fit-content;
+  height: auto;
+  padding: 7px 16px;
+  font-family: "LINE Seed JP", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+}
+
 /* ------------------------------------------- */
-/* SECCION CATALOGO */
+/* SECCION CATALOGO/CARROUSEL (HOME) */
 
 .card--catalogo .carousel {
   padding: 6px 8px 18px;
@@ -178,11 +191,12 @@
 
 /* ------------------------------------------- */
 /* SECCION PRESUPUESTO */
+/* ------------------------------------------- */
 
 /* CONTENEDOR "CARD" PRESUPUESTO */
 .card--presupuesto {
   position: relative;
-  padding-top: 28px;
+  padding-top: 18px;
   padding-bottom: 28px;
   display: flex;
   flex-direction: column;
@@ -204,18 +218,25 @@
   opacity: 0.2;
   z-index: 0;
   margin-right: 80px;
+  pointer-events: none;
+}
+
+/* ARREGLO PARA CLICKEAR BOTON "AQUÍ" */
+.card--presupuesto>* {
+  position: relative;
+  z-index: 1;
 }
 
 /* TITULO PRESUPUESTO */
 .card--presupuesto .card__title {
   max-width: 300px;
-  margin-top: 10px;
 }
 
 /* TEXTO PRINCIPAL (p) */
 .presupuesto__text {
   text-align: center;
   margin: 0;
+  font-family: "LINE Seed JP", sans-serif;
   font-size: 18px;
   color: #2b2b2b;
   max-width: 300px;
@@ -234,7 +255,8 @@
   color: #ffffff;
   text-decoration: none;
   border-radius: 6px;
-  font-weight: 750;
+  font-family: "LINE Seed JP", sans-serif;
+  font-weight: 700;
   font-size: 20px;
   letter-spacing: 0.5px;
 }
@@ -250,6 +272,7 @@
 
 .presupuesto__beneficios li {
   margin: 10px 0;
+  font-family: "LINE Seed JP", sans-serif;
   font-size: 16px;
   color: #2b2b2b;
 }
@@ -262,11 +285,14 @@
 
 /* ------------------------------------------- */
 /* SECCION SOBRE NOSOTROS */
+/* ------------------------------------------- */
 
 .sobre__text {
   margin: 0 0 18px 10px;
   color: #2b2b2b;
-  line-height: 1.4;
+  font-family: "LINE Seed JP", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
 }
 
 .team {
@@ -322,20 +348,24 @@
 
 /* NOMBRE */
 .team__name {
+  font-family: "LINE Seed JP", sans-serif;
   font-size: 18px;
   font-weight: 600;
   text-align: center;
+  color: #bd9ff5;
 }
 
 /* BIO */
 .team__bio {
-  font-size: 15px;
+  font-family: "LINE Seed JP", sans-serif;
+  font-size: 14px;
   font-weight: 400;
   text-align: center;
 }
 
 /* ------------------------------------------- */
 /* FOOTER */
+/* ------------------------------------------- */
 
 .footer {
   background: #c5e4f7;
@@ -356,6 +386,8 @@
   display: grid;
   gap: 2px;
   text-align: left;
+  font-family: "LINE Seed JP", sans-serif;
+  color: #4b4b4b;
 }
 
 .footer__line {
@@ -416,6 +448,7 @@
 
 /* ------------------------------------------- */
 /* PAGINA CATALOGO */
+/* ------------------------------------------- */
 
 /* ENCABEZADO DEL CATÁLOGO (H1 + P) */
 .catalogoHead {
@@ -433,6 +466,8 @@
   color: #bd9ff5;
   text-transform: uppercase;
   letter-spacing: 0.5px;
+  font-family: "LINE Seed JP", sans-serif;
+  font-weight: 600;
   font-size: 26px;
   padding-left: 10px;
 }
@@ -441,11 +476,12 @@
   margin: 0;
   color: #2b2b2b;
   opacity: 0.85;
+  font-family: "LINE Seed JP", sans-serif;
   font-size: 16px;
   padding-left: 10px;
 }
 
-/* <!-- FILTROS DE BOOSTRAP / ACORDIÓN --> */
+/* FILTROS DE BOOSTRAP / ACORDIÓN */
 
 /* CONTENEDOR CARD */
 .catalogoFilters {
@@ -458,22 +494,26 @@
   overflow: hidden;
 }
 
-/* AJUSTES A BOOSTRAP */
+/* FILTROS DE ACORDION */
 .catalogoFilters .accordion-item {
   border: 0;
   background: transparent;
+  font-family: "LINE Seed JP", sans-serif;
 }
 
+/* SUBTITULO ACORDION CERRADO */
 .catalogoFilters .accordion-button {
   background: rgba(255, 255, 255, 0.45);
-  color: #2b2b2b;
-  font-weight: 750;
-  letter-spacing: 0.3px;
+  color: #4b4b4b;
+  font-weight: 700;
+  margin-left: 8px;
 }
 
+/* SUBITUTLO ACORDION ABIERTO */
 .catalogoFilters .accordion-button:not(.collapsed) {
   background: rgba(255, 255, 255, 0.55);
   color: #bb9df4;
+  font-family: "LINE Seed JP", sans-serif;
 }
 
 .catalogoFilters .accordion-button:focus {
@@ -493,7 +533,6 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 24px;
-  row-gap: 24px;
   align-items: stretch;
 }
 
@@ -545,20 +584,20 @@
 
 /* TITULOS DE PRODUCTOS */
 .catalogoItem__title {
-  margin: 0;
-  color: #2b2b2b;
+  margin-top: 5px;
+  color: #4b4b4b;
   text-transform: uppercase;
-  font-size: 20px;
-  font-weight: 650;
+  font-family: "LINE Seed JP", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
   letter-spacing: 0.4px;
 }
 
 /* TEXTO DESCRIPCION DE PRODUCTOS */
 .catalogoItem__text {
-  margin: 0;
-  color: #2b2b2b;
-  opacity: 0.85;
+  color: #4b4b4b;
   line-height: 1.4;
+  font-family: "LINE Seed JP", sans-serif;
   font-size: 16px;
   font-weight: 400;
 }
@@ -582,9 +621,11 @@
   text-decoration: none;
   border-radius: 6px;
   background: #a4d2dd;
+  font-family: "LINE Seed JP", sans-serif;
   color: #ffffff;
-  font-weight: 750;
-  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 12px;
   letter-spacing: 0.4px;
   transition: transform .2s ease, filter .2s ease;
 }
@@ -596,13 +637,16 @@
 
 /* PRECIO PRODUCTOS */
 .catalogoItem__price {
+  font-family: "LINE Seed JP", sans-serif;
   font-weight: 800;
   color: #bb9df4;
   font-size: 20px;
+  padding-right: 20px;
 }
 
 /* ------------------------------------------- */
-/* PRODUCTOS DESTACADO 2026 */
+/* PRODUCTOS DESTACADOS 2026 */
+/* ------------------------------------------- */
 
 .destacados {
   margin: 24px auto 0;
@@ -616,7 +660,8 @@
 /* TITULO DE SECCION DESTACADOS */
 .destacados__title {
   padding-left: 10px;
-  font-size: 18px;
+  font-family: "LINE Seed JP", sans-serif;
+  font-size: 20px;
   font-weight: 800;
   letter-spacing: 0.5px;
   color: #bb9df4;
@@ -626,9 +671,9 @@
 /* TEXTO EN DESTACADOS */
 .destacados__text {
   padding-left: 10px;
-  color: #2b2b2b;
-  opacity: 0.85;
-  font-size: 16px;
+  color: #4b4b4b;
+  font-family: "LINE Seed JP", sans-serif;
+  font-size: 14px;
 }
 
 /* GRID PARA VIDEOS */
@@ -651,9 +696,10 @@
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
   transition: transform .2s ease, box-shadow .2s ease;
 }
+
 .destacados__card:hover {
   transform: translateY(-3px);
-  box-shadow: 0 10px 22px rgba(0,0,0,0.10);
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.10);
 }
 
 /* VIDEOS*/
@@ -664,3 +710,698 @@
   display: block;
 }
 
+/* ------------------------------------------- */
+/* PAGINA CONTACTO */
+/* ------------------------------------------- */
+
+/* ENCABEZADO DE PÁGINA CONTACTO */
+.contactoHead {
+  margin: 6px auto 18px;
+  padding: 22px;
+  background: rgba(255, 255, 255, 0.35);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 6px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.contactoHead__title {
+  margin: 0 0 6px;
+  color: #bd9ff5;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-family: "LINE Seed JP", sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  padding-left: 10px;
+}
+
+.contactoHead__subtitle {
+  margin: 0;
+  color: #4b4b4b;
+  font-family: "LINE Seed JP", sans-serif;
+  font-size: 16px;
+  padding-left: 10px;
+}
+
+/* ------------------------------------------- */
+/* LAYOUT 2 COLUMNAS (FORM + MAPA) */
+
+.contactoLayout {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+  align-items: stretch;
+  margin: 0 auto 18px;
+}
+
+/* CONTENEDOR DEL GRID */
+.contactoLayout__col {
+  min-width: 0;
+}
+
+/* ------------------------------------------- */
+/* FORMULARIO / CONTACTO */
+
+.contactoForm {
+  height: 100%;
+  margin: 0;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.35);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 6px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.contactoForm__title {
+  margin: 0 0 12px;
+  padding-left: 20px;
+  font-family: "LINE Seed JP", sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  color: #9cd6ec;
+  text-transform: uppercase;
+}
+
+.contactoForm__box {
+  background: rgba(255, 255, 255, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 6px;
+  padding: 18px;
+}
+
+.contactoForm__label {
+  font-family: "LINE Seed JP", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  color: #4b4b4b;
+}
+
+.contactoForm__btn {
+  border-radius: 6px;
+  font-weight: 800;
+  letter-spacing: 0.4px;
+}
+
+#btn__send {
+  font-family: "LINE Seed JP", sans-serif;
+  background: #bd9ff5;
+  border-color: #bd9ff5;
+}
+
+#btn__send:hover {
+  filter: brightness(0.90);
+}
+
+#btn__send:active {
+  transform: scale(0.97);
+  filter: brightness(0.85);
+}
+
+.contactoForm__btn--reset {
+  border-color: rgba(0, 0, 0, 0.25);
+  font-family: "LINE Seed JP", sans-serif;
+}
+
+/* ------------------------------------------- */
+/* "DONDE ENCONTRARNOS" - MAPA / CONTACTO */
+
+.ubicacion {
+  height: 100%;
+  margin: 0;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.35);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 6px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+}
+
+.ubicacion__title {
+  margin: 0 0 12px;
+  font-family: "LINE Seed JP", sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  color: #9cd6ec;
+  text-transform: uppercase;
+}
+
+.ubicacion__mapBox {
+  border-radius: 6px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  background: #ffffff;
+  flex: 1;
+  min-height: 360px;
+}
+
+.ubicacion__map {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+}
+
+/* ------------------------------------------- */
+/* RESPONSIVE - TABLET Y MOBILE*/
+/* ------------------------------------------- */
+
+/* MQ HEADER / NAV / BANNER */
+/* TABLET */
+
+@media (min-width: 768px) and (max-width: 1439px) {
+  .header__bar {
+    top: 14px;
+    left: 14px;
+    right: 14px;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 0;
+  }
+
+  .header__logo {
+    display: none;
+  }
+
+  .header__navWrap {
+    padding: 0;
+    position: relative;
+  }
+
+  .header__toggler {
+    padding: 5px 8px;
+    background: rgba(255, 255, 255, 0.8);
+    border: 0;
+    border-radius: 6px;
+  }
+
+  .header__toggler:focus {
+    box-shadow: none;
+    outline: 2px solid rgba(187, 157, 244, 0.4);
+    outline-offset: 2px;
+  }
+
+  .header__toggler .navbar-toggler-icon {
+    filter: grayscale(1) brightness(0.35);
+  }
+
+  .header__collapse {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    margin-top: 8px;
+    padding: 12px 14px;
+    min-width: 190px;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 8px;
+    z-index: 20;
+  }
+
+  .header__menu {
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0;
+  }
+
+  .header__menu .nav-link {
+    text-align: right;
+    font-size: 14px;
+    letter-spacing: 0.1em;
+    padding: 8px 0;
+  }
+}
+
+/* MQ HEADER / NAV / BANNER */
+/* MOBILE */
+@media (min-width: 320px) and (max-width: 767px) {
+
+  .header__bar {
+    top: 10px;
+    right: 10px;
+    left: auto;
+    justify-content: flex-end;
+  }
+
+  .header__collapse {
+    position: absolute;
+    right: 0;
+    margin-top: 8px;
+    padding: 10px 12px;
+    min-width: 150px;
+    background: rgba(255, 255, 255, 0.96);
+    border-radius: 8px;
+  }
+
+  .header__menu {
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0;
+  }
+
+  .header__menu .nav-link {
+    font-size: 12px;
+    padding: 6px 0;
+  }
+
+  .header__brand {
+    display: none;
+  }
+
+  .banner img {
+    height: 100px
+  }
+}
+
+/* MQ GRID - CATALOGO + PRESUPUESTO */
+/* TABLET */
+
+@media (min-width: 768px) and (max-width: 1439px) {
+  .homeGrid {
+    grid-template-columns: 2fr 1fr;
+    grid-template-areas:
+      "catalogo presupuesto"
+      "sobre sobre";
+    gap: 16px;
+  }
+
+  .card--catalogo .carousel-item .col-md-4 {
+    display: none;
+  }
+
+  .card--catalogo .carousel-item .col-md-4:first-child {
+    display: block;
+    width: 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
+/* MQ GRID - CATALOGO + PRESUPUESTO */
+/* MOBILE */
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .main {
+    padding: 12px;
+  }
+
+  .homeGrid {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "catalogo"
+      "presupuesto"
+      "sobre";
+    gap: 12px;
+  }
+
+  .homeGrid .card {
+    padding: 14px;
+  }
+
+  .card--catalogo {
+    position: relative;
+  }
+
+  .card--catalogo .carousel {
+    padding: 6px 0 12px;
+  }
+
+  .card--catalogo .catalogoCard {
+    aspect-ratio: 4 / 3;
+    padding: 1px;
+  }
+
+  #btnCatalogo {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    width: auto;
+    font-size: 12px;
+    padding: 8px 12px;
+  }
+
+  .btnCard:active {
+    transform: scale(0.96);
+    filter: brightness(0.9);
+  }
+
+  .card--presupuesto {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    gap: 14px;
+  }
+
+  .card--presupuesto .card__title {
+    max-width: 100%;
+    margin-top: 0;
+  }
+
+  .presupuesto__text,
+  .presupuesto__beneficios {
+    max-width: 100%;
+  }
+}
+
+/* MQ GRID - SOBRE NOSOTROS */
+/* TABLET */
+
+@media (min-width: 768px) and (max-width: 1439px) {
+
+  .team {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .team__member {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 16px;
+  }
+
+  .team__top {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    gap: 10px;
+  }
+
+  .team__photo {
+    width: 100%;
+    max-width: 220px;
+  }
+
+  .team__name {
+    text-align: center;
+    font-size: 17px;
+  }
+
+  .team__bio {
+    text-align: center;
+    font-size: 14px;
+  }
+}
+
+/* MQ GRID - SOBRE NOSOTROS */
+/* MOBILE */
+
+@media (min-width: 320px) and (max-width: 767px) {
+
+  .card--sobre .card__title {
+    text-align: center;
+    padding-left: 0;
+  }
+
+  .card--sobre .sobre__text {
+    text-align: center;
+  }
+}
+
+/* MQ GRID - FOOTER */
+/* TABLET */
+
+@media (min-width: 768px) and (max-width: 1439px) {
+  .footer {
+    padding: 14px 12px 16px;
+  }
+
+  .footer__box {
+    margin-left: 0;
+    display: grid;
+    grid-template-columns: 1fr 50px;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+      "social home"
+      "info info";
+    row-gap: 10px;
+    column-gap: 0;
+    align-items: start;
+  }
+
+  .footer__social {
+    grid-area: social;
+    justify-self: start;
+    align-self: start;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 30px;
+  }
+
+  .footer__icon {
+    width: auto;
+    height: 32px;
+  }
+
+  .footer__icon img {
+    width: 60px;
+    margin-left: 60px;
+  }
+
+  .footer__home {
+    grid-area: home;
+    justify-self: center;
+    align-self: start;
+    margin-right: 0;
+    display: inline-flex;
+  }
+
+  .footer__home img {
+    width: 32px;
+    height: 32px;
+    margin-right: 60px;
+  }
+
+  .footer__info {
+    grid-area: info;
+    width: 90%;
+    justify-self: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    text-align: center;
+  }
+
+  .footer__line {
+    margin: 0;
+    font-size: 11px;
+    line-height: 1.2;
+    white-space: nowrap;
+  }
+}
+
+/* MQ GRID - FOOTER */
+/* MOBILE */
+
+@media (min-width: 320px) and (max-width: 767px) {
+
+  .footer__box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* LOGOS REDES SOCIALES */
+  .footer__social {
+    order: 1;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  /* TEXTO INFO */
+  .footer__info {
+    order: 2;
+    display: flex;
+    justify-content: center;
+    gap: 3px;
+    flex-wrap: wrap;
+    text-align: center;
+  }
+
+  .footer__icon img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .footer__line {
+    font-size: 10px;
+  }
+
+  /* OCULTAR LOGO HOME */
+  .footer__home {
+    display: none;
+  }
+}
+
+/* MQ - PAG CATALOGO / GRID PRODUCTOS */
+/* TABLET */
+
+@media (min-width: 768px) and (max-width: 1439px) {
+
+  .catalogoGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .catalogoItem {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: stretch;
+    gap: 1rem;
+  }
+
+  .catalogoItem__imgBox {
+    width: 100%;
+    height: 100%;
+  }
+
+  .catalogoItem__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .catalogoItem__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .catalogoItem__bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.6rem;
+    margin-top: 1rem;
+  }
+
+  .catalogoItem__price {
+    order: 1;
+  }
+
+  .catalogoItem__btn {
+    order: 2;
+  }
+}
+
+/* MQ - PAG CATALOGO / PROD. DESTACADOS */
+/* TABLET */
+
+@media (min-width: 768px) and (max-width: 1439px) {
+
+  .destacados__grid {
+    width: min(1240px, 100%);
+    margin: 1.5rem auto 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem;
+  }
+}
+
+/* MQ - PAG CATALOGO / GRID PRODUCTOS */
+/* MOBILE */
+
+@media (min-width: 320px) and (max-width: 767px) {
+
+  .catalogoGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .catalogoItem {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .catalogoItem__imgBox {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    max-width: none;
+    overflow: hidden;
+  }
+
+  .catalogoItem__img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+  }
+
+  .catalogoItem__content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .catalogoItem__bottom {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    gap: 0.8rem;
+    margin-top: 1rem;
+  }
+
+  .catalogoItem__btn {
+    width: fit-content;
+  }
+
+  .catalogoItem__price {
+    text-align: left;
+    white-space: nowrap;
+  }
+}
+
+/* MQ - PAG CONTACTO / FORM Y MAPA */
+/* TABLET */
+
+@media (min-width: 768px) and (max-width: 1439px) {
+
+  .contactoLayout {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .contactoLayout__col {
+    width: 100%;
+  }
+
+  .contactoForm,
+  .ubicacion {
+    width: 100%;
+  }
+
+  .ubicacion__mapBox {
+    width: 100%;
+  }
+
+  .ubicacion__map {
+    width: 100%;
+    min-height: 320px;
+    display: block;
+  }
+}
+
+/* MQ - PAG CONTACTO / FORM Y MAPA */
+/* MOBILE */
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .contactoLayout {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .contactoForm,
+  .ubicacion {
+    padding: 16px;
+  }
+
+  .ubicacion__mapBox {
+    min-height: 260px;
+  }
+}
